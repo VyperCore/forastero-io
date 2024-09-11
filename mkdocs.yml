@@ -1,0 +1,38 @@
+site_name: Forastero IO
+repo_name: vypercore/forastero-io
+repo_url: https://github.com/vypercore/forastero-io
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: teal
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+nav:
+  - Welcome: "index.md"
+  - AMBA: "amba.md"
+  - Simple Interfaces:
+    - Handshake: "handshake.md"
+    - Mapped: "mapped.md"
+    - Stream: "stream.md"
