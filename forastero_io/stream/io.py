@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2023-2024 Vypercore. All Rights Reserved
+
+from forastero import BaseIO
+
+
+class StreamIO(BaseIO):
+    def __init__(self, dut, name, role):
+        super().__init__(dut, name, role, ["data", "valid"], ["ready"])
