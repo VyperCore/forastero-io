@@ -9,8 +9,8 @@ This repository offers a collection of standard interface components for use wit
  * Simple stream (valid-ready) interface;
  * Simple mapped access interface (with separate request and response streams).
 
-Documentation is provided in [docs/index.md] or can be built locally using
-Mkdocs (`poetry run mkdocs serve`).
+Documentation is provided in [docs/index.md](docs/index.md) or can be built
+locally using Mkdocs (`poetry run mkdocs serve`).
 
 ## Support
 
