@@ -1,11 +1,20 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2023-2024 Vypercore. All Rights Reserved
 
-from forastero.io import BaseIO
+from collections.abc import Callable
+
+from cocotb.handle import HierarchyObject
+from forastero.io import BaseIO, IORole
 
 
 class AXI4StreamIO(BaseIO):
-    def __init__(self, dut, name, role):
+    def __init__(
+        self,
+        dut: HierarchyObject,
+        name: str,
+        role: IORole,
+        io_style: Callable[[str | None, str, IORole, IORole], str] | None = None,
+    ):
         super().__init__(
             dut,
             name,
@@ -21,4 +30,5 @@ class AXI4StreamIO(BaseIO):
                 "tvalid",
             ],
             ["tready"],
+            io_style=io_style,
         )
