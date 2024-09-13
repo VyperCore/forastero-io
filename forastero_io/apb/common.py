@@ -1,6 +1,5 @@
-# Copyright 2023-2024 Vypercore - All Rights Reserved
-# Unauthorized copying of this file in whole or in part, via any medium is
-# strictly prohibited. Proprietary and confidential.
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2023-2024 Vypercore. All Rights Reserved
 
 from enum import IntEnum
 
