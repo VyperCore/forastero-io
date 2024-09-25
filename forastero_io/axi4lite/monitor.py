@@ -24,7 +24,7 @@ class AXI4LiteWriteAddressMonitor(BaseMonitor):
                 capture(
                     AXI4LiteWriteAddress(
                         address=self.io.get("awaddr"),
-                        protection=Prot._pt_cast(self.io.get("awprot")),
+                        protection=Prot(self.io.get("awprot")),
                         valid=1,
                     )
                 )
@@ -53,7 +53,7 @@ class AXI4LiteWriteResponseMonitor(BaseMonitor):
             if self.io.get("bvalid") and self.io.get("bready"):
                 capture(
                     AXI4LiteWriteResponse(
-                        response=Resp._pt_cast(self.io.get("bresp", 0)),
+                        response=Resp(self.io.get("bresp", 0)),
                         valid=1,
                     )
                 )
@@ -69,7 +69,7 @@ class AXI4LiteReadAddressMonitor(BaseMonitor):
                 capture(
                     AXI4LiteReadAddress(
                         address=self.io.get("araddr"),
-                        protection=Prot._pt_cast(self.io.get("arprot")),
+                        protection=Prot(self.io.get("arprot")),
                         valid=1,
                     )
                 )
@@ -85,7 +85,7 @@ class AXI4LiteReadResponseMonitor(BaseMonitor):
                 capture(
                     AXI4LiteReadResponse(
                         data=self.io.get("rdata", 0),
-                        response=Resp._pt_cast(self.io.get("rresp", 0)),
+                        response=Resp(self.io.get("rresp", 0)),
                         valid=1,
                     )
                 )
